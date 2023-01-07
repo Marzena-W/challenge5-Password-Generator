@@ -99,11 +99,22 @@ function getPasswordOptions() {
 }
 
 // Function for getting a random element from an array
-function getRandom(arr) {
+let chosenNumber = 10;
 
+var getRandoms = function(allCharacters, chosenNumber) {
+  var result = [];
+  for (var i = 0; i < chosenNumber; i++) {
+      result.push(allCharacters[Math.floor(Math.random()*allCharacters.length)]);
+  }
+  console.log(result)
+  return result;
 }
+getRandoms(allCharacters, chosenNumber);
+
+
 
 // Function to generate password with user input
+// replace with variable from getRandom function - !!!!!
 function generatePassword() {
   return "getRandoms";
 }
