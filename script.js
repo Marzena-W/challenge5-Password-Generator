@@ -92,17 +92,19 @@ var upperCasedCharacters = [
 const allCharacters = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters);
 console.log(allCharacters);
 
-
 // Function to prompt user for password options
 function getPasswordOptions() {
 
 }
 
+
+
 // Function for getting a random element from an array
+
 let chosenNumber = 10;
+var result = [];
 
 var getRandoms = function(allCharacters, chosenNumber) {
-  var result = [];
   for (var i = 0; i < chosenNumber; i++) {
       result.push(allCharacters[Math.floor(Math.random()*allCharacters.length)]);
   }
@@ -113,10 +115,12 @@ getRandoms(allCharacters, chosenNumber);
 
 
 
+
+
+
 // Function to generate password with user input
-// replace with variable from getRandom function - !!!!!
 function generatePassword() {
-  return "getRandoms";
+  return result;
 }
 
 
