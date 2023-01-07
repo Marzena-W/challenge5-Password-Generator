@@ -120,7 +120,7 @@ getRandoms(allCharacters, chosenNumber);
 
 // Function to generate password with user input
 function generatePassword() {
-  return result;
+  return result.join('');
 }
 
 
