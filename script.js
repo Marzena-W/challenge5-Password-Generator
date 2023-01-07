@@ -93,9 +93,8 @@ const allCharacters = specialCharacters.concat(numericCharacters, lowerCasedChar
 console.log(allCharacters);
 
 
-// prompt to ask user to choose length of a password ------
+// prompt to ask user to choose length of a password 
 let chosenNumber = 0;
-
 function passwordLength() {
 chosenNumber = prompt("How many characters would you like in your password?") 
 if (chosenNumber < 10 || chosenNumber > 64) {
@@ -104,37 +103,30 @@ if (chosenNumber < 10 || chosenNumber > 64) {
 }
 passwordLength = chosenNumber
 }
-passwordLength();
-
-
-
-
-
 
 
 // Function to prompt user for password options - !
 function getPasswordOptions() {
-  
 }
 
+
 // Function for getting a random element from an array - !
-// let chosenNumber = 10;
 var result = [];
 
 var getRandoms = function(allCharacters, chosenNumber) {
   for (var i = 0; i < chosenNumber; i++) {
-      result.push(allCharacters[Math.floor(Math.random()*allCharacters.length)]);
+      result.push(allCharacters[Math.floor(Math.random() * allCharacters.length)]);
   }
   console.log(result)
   return result;
 }
-getRandoms(allCharacters, chosenNumber);
 
 
 
 // Function to generate password with user input - !
-
 function generatePassword() {
+  passwordLength();
+  getRandoms(allCharacters, chosenNumber);
   return result.join('');
 }
 
