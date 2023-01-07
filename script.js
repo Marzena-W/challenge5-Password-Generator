@@ -88,20 +88,37 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-//  new array with all characters
+
 const allCharacters = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters);
 console.log(allCharacters);
 
-// Function to prompt user for password options
-function getPasswordOptions() {
 
+// prompt to ask user to choose length of a password ------
+let chosenNumber = 0;
+
+function passwordLength() {
+chosenNumber = prompt("How many characters would you like in your password?") 
+if (chosenNumber < 10 || chosenNumber > 64) {
+  alert("Choose number between 10 and 64");
+  return passwordLength();
+}
+passwordLength = chosenNumber
+}
+passwordLength();
+
+
+
+
+
+
+
+// Function to prompt user for password options - !
+function getPasswordOptions() {
+  
 }
 
-
-
-// Function for getting a random element from an array
-
-let chosenNumber = 10;
+// Function for getting a random element from an array - !
+// let chosenNumber = 10;
 var result = [];
 
 var getRandoms = function(allCharacters, chosenNumber) {
@@ -115,18 +132,15 @@ getRandoms(allCharacters, chosenNumber);
 
 
 
+// Function to generate password with user input - !
 
-
-
-// Function to generate password with user input
 function generatePassword() {
   return result.join('');
 }
 
 
 
-
-// Get references to the #generate element
+// Get references to the #generate element - !
 var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
