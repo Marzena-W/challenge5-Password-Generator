@@ -89,7 +89,7 @@ var upperCasedCharacters = [
 ];
 
 
-// prompt to ask user to choose length of a password 
+// Function to prompt user to choose length of a password 
 let chosenNumber = 0;
 function passwordLength() {
 chosenNumber = prompt("How many characters would you like in your password?") 
@@ -101,33 +101,33 @@ passwordLength = chosenNumber
 }
 
 
-// Function to prompt user for password options - !
+// Function to prompt user for password options
 var allCharacters = [];
 
 function getPasswordOptions() {
-  let special = confirm("Do you want ot include special character?");
+  let special = confirm("Do you want to include special character?");
     if (special) {
-      allCharacters += specialCharacters;
+      allCharacters += specialCharacters.join('');
     } else false;
 
-    let numeric = confirm("Do you want ot include numeric character?");
+    let numeric = confirm("Do you want to include numeric character?");
     if (numeric) {
-      allCharacters += numericCharacters;
+      allCharacters += numericCharacters.join('');
     } else false;
 
-    let lower = confirm("Do you want ot include lower cased character?");
+    let lower = confirm("Do you want to include lower cased character?");
     if (lower) {
-      allCharacters += lowerCasedCharacters;
+      allCharacters += lowerCasedCharacters.join('');
     } else false;
 
-    let upper = confirm("Do you want ot include upper cased character?");
+    let upper = confirm("Do you want to include upper cased character?");
     if (upper) {
-      allCharacters += upperCasedCharacters;
+      allCharacters += upperCasedCharacters.join('');
     } else false;
-}
+  }
 
-
-// Function for getting a random element from an array - !
+  
+// Function for getting a random element from an array
 var result = [];
 
 var getRandoms = function(allCharacters, chosenNumber) {
@@ -139,8 +139,7 @@ var getRandoms = function(allCharacters, chosenNumber) {
 }
 
 
-
-// Function to generate password with user input - !
+// Function to generate password with user input
 function generatePassword() {
   passwordLength();
   getPasswordOptions();
@@ -150,7 +149,7 @@ function generatePassword() {
 
 
 
-// Get references to the #generate element - !
+// Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
