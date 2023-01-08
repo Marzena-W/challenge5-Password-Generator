@@ -89,10 +89,6 @@ var upperCasedCharacters = [
 ];
 
 
-const allCharacters = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters);
-console.log(allCharacters);
-
-
 // prompt to ask user to choose length of a password 
 let chosenNumber = 0;
 function passwordLength() {
@@ -106,7 +102,28 @@ passwordLength = chosenNumber
 
 
 // Function to prompt user for password options - !
+var allCharacters = [];
+
 function getPasswordOptions() {
+  let special = confirm("Do you want ot include special character?");
+    if (special) {
+      allCharacters += specialCharacters;
+    } else false;
+
+    let numeric = confirm("Do you want ot include numeric character?");
+    if (numeric) {
+      allCharacters += numericCharacters;
+    } else false;
+
+    let lower = confirm("Do you want ot include lower cased character?");
+    if (lower) {
+      allCharacters += lowerCasedCharacters;
+    } else false;
+
+    let upper = confirm("Do you want ot include upper cased character?");
+    if (upper) {
+      allCharacters += upperCasedCharacters;
+    } else false;
 }
 
 
@@ -126,6 +143,7 @@ var getRandoms = function(allCharacters, chosenNumber) {
 // Function to generate password with user input - !
 function generatePassword() {
   passwordLength();
+  getPasswordOptions();
   getRandoms(allCharacters, chosenNumber);
   return result.join('');
 }
