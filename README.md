@@ -6,7 +6,7 @@
 
 ## Usage 
 To access the solution open the below link to deployed application.
-* Deployed application - [https://marzena-w.github.io/challenge5-Password-Generator/]
+* Deployed application - [https://marzena-w.github.io/password-generator/]
 * Click button "Generate Password"
 * Answer prompts
 * Screenshot of the challenge5:
