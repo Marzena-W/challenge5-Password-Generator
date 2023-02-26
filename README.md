@@ -1,4 +1,4 @@
-# challenge5-Password-Generator
+# Password-Generator
 
 ## Description 
 > Challenge 5 is about creating an app that will generate a random password based on selected criteria by a user. When clicked on the button the app presents a series of prompts to chose length and what characters to use. 
